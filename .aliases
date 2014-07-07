@@ -1,3 +1,18 @@
+# Personal Faves
+alias zshconfig="subl ~/.zshrc"
+alias ohmyzsh="subl ~/.oh-my-zsh"
+alias aplog='tail -f /var/log/apache2/error_log'
+alias hosts='sudo subl /etc/hosts'
+alias vhosts='sudo subl /usr/local/httpd-vhosts.conf'
+alias phpconfig='sudo subl /etc/php.ini'
+alias apacheconfig='sudo subl /etc/apache2/httpd.conf'
+alias workspace='cd /Users/diegopaladino/Repositories/'
+alias apacherestart='sudo apachectl -e info -k restart'
+alias apachestop='sudo apachectl -e info -k stop'
+alias apachegraceful='sudo apachectl -e info -k graceful'
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
+alias flush="dscacheutil -flushcache"
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias cd..="cd .."
@@ -12,16 +27,13 @@ alias slt='open -a "Sublime Text 2"'
 # also/or do this:
 # ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
-
 # be nice
 alias please=sudo
-alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 
 # handy things
 alias bunyip='node ~/code/bunyip/cli.js'
 alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
 alias vlc="osascript ~/code/VLCControl/VLCControl.scpt"
-
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -57,7 +69,6 @@ alias c='pygmentize -O style=monokai -f console256 -g'
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
-
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
 
@@ -69,18 +80,9 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # Enhanced WHOIS lookups
 alias whois="whois -h whois-servers.net"
 
-# Flush Directory Service cache
-alias flush="dscacheutil -flushcache"
-
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
-
-# Canonical hex dump; some systems have this symlinked
-type -t hd > /dev/null || alias hd="hexdump -C"
-
-# OS X has no `md5sum`, so use `md5` as a fallback
-type -t md5sum > /dev/null || alias md5sum="md5"
 
 # Trim new lines and copy to clipboard
 alias trimcopy="tr -d '\n' | pbcopy"
@@ -97,9 +99,6 @@ alias fs="stat -f \"%z bytes\""
 
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
-
-# Empty the Trash on all mounted volumes and the main HDD
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"

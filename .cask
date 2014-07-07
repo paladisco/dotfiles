@@ -1,0 +1,30 @@
+#!/bin/sh
+
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+function installcask() {
+	brew cask install "${@}" 2> /dev/null
+}
+
+installcask dropbox
+installcask firefox-aurora
+installcask google-chrome
+installcask google-chrome-canary
+installcask alfred
+installcask cakebrew
+installcask filezilla
+installcask source-tree
+installcask imagealpha
+installcask imageoptim
+installcask iterm2
+installcask mou
+installcask miro-video-converter
+installcask spotify
+installcask sublime-text-3
+installcask the-unarchiver
+installcask tor-browser
+installcask transmission
+installcask u-torrent
+installcask virtualbox
+installcask vlc

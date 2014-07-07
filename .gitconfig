@@ -6,10 +6,11 @@
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
 [color]
-	ui = always
+	ui = true
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+	autocrlf = input
 [color "branch"]
 	current = yellow reverse
 	local = yellow
@@ -25,6 +26,7 @@
 	untracked = cyan
 [merge]
 	log = true
+	tool = diffmerge
 [url "git@github.com:"]
 	insteadOf = "gh:"
 	pushInsteadOf = "github:"
@@ -42,5 +44,21 @@
 # http://rentzsch.tumblr.com/post/564806957/public-but-hackable-git-submodules
 [url "git@github.com:paulirish/"]
   insteadOf = "git://github.com/paulirish/"
-[help]
-	autocorrect = 1
+[user]
+	name = diegopaladino
+	email = paladino@racerfish.com
+[diff]
+	tool = diffmerge
+[push]
+	default = matching
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
