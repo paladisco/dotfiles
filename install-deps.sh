@@ -19,3 +19,8 @@ git clone git://github.com/dronir/SpotifyControl.git
 # VLC Controll Script
 cd ~/code
 git clone git://github.com/jeroenbegyn/VLCControl.git
+
+# Switch Default Shell to ZSH and install Oh My ZSH!
+chsh -s /usr/local/bin/zsh
+
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh

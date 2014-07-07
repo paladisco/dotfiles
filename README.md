@@ -1,45 +1,52 @@
 # Diego's dotfiles
 
-Mostly based on the work of these awesome community members:
+My first shot at a dotfiles repo. This hasn't been tested yet as i roughly pasted it together from my current setup but it will be tested when i set up my next OS X machine from scratch.
 
-* [Mathias Byrens](https://github.com/mathiasbynens/dotfiles/)
+The dotfiles are mostly based on the work of these awesome community members:
 
-* [Paul Irish](https://github.com/paulirish/dotfiles/)
+* [Mathias Byrens](https://github.com/mathiasbynens/dotfiles/) - legendary dotfile creator
 
-* [Zeno Rocha](https://github.com/zenorocha/dotfiles/)
+* [Paul Irish](https://github.com/paulirish/dotfiles/) - one of the best web dudes out there
+
+* [Zeno Rocha](https://github.com/zenorocha/dotfiles/) - his Grunt based dotfile installer is awesome
+
+* [Steve Losh](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt) - best ZSH prompt ever
 
 I just copy and pasted together the most basic stuff from above dotfiles and merged them with my own prefs.
 
-I recommend using ZSH as a shell.
-
 ## Files Overview
 
-####  Automatic config
+####  Utility config
 * `.ackrc` - for ack (better than grep)
 * `.vimrc`, `.vim` - vim config, obv.
+* `.git`
+* `.gitattributes`
+* `.gitconfig`
+* `.gitignore`
 
 #### shell environment
 * `.aliases`
+* `.bash_profile`
 * `.bash_prompt`
 * `.exports`
 * `.functions`
 * `.zshrc`
 
 #### manual run
-* `.osx` - run on a fresh osx machine
-* `.brew` - homebrew initialization
-* `.cask` - additional app installs via homebrew
-
-#### git
-* `.git`
-* `.gitattributes`
-* `.gitconfig`
-* `.gitignore`
+* `.osx` - optimum defaults to run on a fresh osx machine
+* `.brew` - homebrew initialization and basic tool install (ack,git,tree and more)
+* `.cask` - additional appstore and other nice app installs via homebrew
+* `install-deps.sh` - some useful tools like z and oh my zsh
 
 ## Installation
 
 ```bash
 git clone https://github.com/paladisco/dotfiles.git && cd dotfiles && ./sync.sh
+~/.osx
+~/.brew
+~/.cask
+~/install-deps.sh
 ```
 
 To update later on, just run the sync again.
+
