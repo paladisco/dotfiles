@@ -42,10 +42,10 @@ I just copy and pasted together the most basic stuff from above dotfiles and mer
 
 ```bash
 git clone https://github.com/paladisco/dotfiles.git && cd dotfiles && ./sync.sh
+~/install-deps.sh
 ~/.osx
 ~/.brew
 ~/.cask
-~/install-deps.sh
 ```
 
 To update later on, just run the sync again.
