@@ -5,12 +5,14 @@
 	s = status -s
 	df = diff --color --color-words --abbrev
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lastchange = log -p --follow -n 1
 [color]
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	autocrlf = input
+	editor = vim
 [color "branch"]
 	current = yellow reverse
 	local = yellow

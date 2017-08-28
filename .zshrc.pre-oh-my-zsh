@@ -38,19 +38,16 @@ ZSH_THEME="kphoen"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx rails ruby github node npm brew)
 
+source $ZSH/oh-my-zsh.sh
+source $HOME/.aliases
+
 # Customize to your needs...
-export PATH=/usr/local/php5-7.1.0-20161202-092124/bin:$PATH:/usr/local/pear/bin:/Users/diegopaladino/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/Library/Frameworks/Python.framework/Versions/3.2/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH=$PATH:/usr/local/pear/bin:/Users/diegopaladino/bin:/usr/local/bin:/usr/local/mysql/bin:/usr/local/git/bin:/Library/Frameworks/Python.framework/Versions/3.2/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export EDITOR="~/bin/mate"
 
 ### Z Integration
 . /usr/local/bin/z.sh
 
-PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-eval $(thefuck --alias)
-
-source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
