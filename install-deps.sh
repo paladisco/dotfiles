@@ -5,6 +5,4 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/
 
-# Switch Default Shell to ZSH and install Oh My ZSH!
-chsh -s /usr/local/bin/zsh
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

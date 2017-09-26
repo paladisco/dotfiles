@@ -1,18 +1,29 @@
 # Personal Faves
 alias composer="php /usr/local/bin/composer.phar"
-alias dockup="cd /Users/diegopaladino/Development/laravel/laradock/;docker-machine start default;eval '$(docker-machine env default)';docker-compose up -d nginx mysql redis;cd -"
 alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias hosts='sudo mate /etc/hosts'
+alias aliases='mate ~/.aliases'
 alias workspace='cd /Users/diegopaladino/Development/laravel'
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias flush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed"
 alias ldw="~/bin/laradock-workspace.sh"
+
+# Homestead
 alias homeup="cd ~/Homestead && vagrant up && cd -"
 alias homepro="cd ~/Homestead && vagrant provision && cd -"
 alias homessh="cd ~/Homestead && vagrant ssh && cd -"
 alias homeboy='php ~/homeboy/homeboy'
 alias homeboync='php ~/homeboy/homeboy --no-create'
+
+# Laravel
+alias pa='php artisan'
+alias par:l='php artisan route:list'
+alias paclean='php artisan cache:clear && php artisan clear-compiled && php artisan route:clear && php artisan config:clear'
+alias pac:c='php artisan config:cache'
+alias pam='php artisan migrate'
+alias pam:r='php artisan migrate:refresh'
+alias pam:rs='php artisan migrate:refresh --seed'
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -68,6 +79,7 @@ alias undopush="git push -f origin HEAD^:master"
 
 # git root
 alias gr='[ ! -z `git rev-parse --show-cdup` ] && cd `git rev-parse --show-cdup || pwd`'
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

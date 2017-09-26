@@ -8,16 +8,18 @@ function installcask() {
 
 installcask alfred
 installcask cakebrew
+installcask caffeine
 installcask docker
 installcask flux
 installcask google-chrome
-installcask google-chrome-canary
+installcask quitter
+installcask firefox
 installcask filezilla
 installcask imagealpha
 installcask imageoptim
 installcask iterm2
 installcask minecraft
-installcask mou
+installcask muzzle
 installcask miro-video-converter
 installcask phpstorm
 installcask spotify
