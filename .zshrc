@@ -46,7 +46,10 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR="~/bin/mate"
 
 ### Z Integration
-. /usr/local/bin/z.sh
+if command -v brew >/dev/null 2>&1; then
+	# Load rupa's z if installed
+	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
 
 PATH=$PATH:$HOME/.composer/vendor/bin:$HOME/.rvm/bin # Add RVM to PATH for scripting
 

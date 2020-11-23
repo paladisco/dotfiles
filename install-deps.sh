@@ -49,6 +49,7 @@ brew install htop
 brew install mysql
 brew install php
 brew install imagemagick
+brew install z
 
 $(brew --prefix)/opt/fzf/install
 
@@ -84,3 +85,8 @@ sudo mv composer.phar /usr/local/bin/composer
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 /usr/local/bin/composer global require laravel/valet
+/usr/local/bin/composer global require laravel/installer
+
+valet install
+
+mkdir ~/Develomplent && cd ~/Development && valet park
