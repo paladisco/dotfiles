@@ -1,25 +1,21 @@
 # Personal Faves
-alias composer="php /usr/local/bin/composer.phar"
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-alias hosts='sudo mate /etc/hosts'
-alias aliases='mate ~/.aliases'
+alias zshconfig="nano ~/.zshrc"
+alias ohmyzsh="nano ~/.oh-my-zsh"
+alias hosts='sudo nano /etc/hosts'
+alias aliases='nano ~/.aliases'
 alias workspace='cd /Users/diegopaladino/Development/laravel'
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 alias flush="sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder;say flushed"
-alias ldw="~/bin/laradock-workspace.sh"
 
-# Homestead
-alias homeup="cd ~/Homestead && vagrant up && cd -"
-alias homepro="cd ~/Homestead && vagrant provision && cd -"
-alias homessh="cd ~/Homestead && vagrant ssh && cd -"
-alias homeboy='php ~/homeboy/homeboy'
-alias homeboync='php ~/homeboy/homeboy --no-create'
+# Better CLI
+alias cat="bat"
+alias ping='prettyping --nolegend'
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
 
 # Laravel
 alias pa='php artisan'
 alias par:l='php artisan route:list'
-alias paclean='php artisan cache:clear && php artisan clear-compiled && php artisan route:clear && php artisan config:clear'
+alias paclean='php artisan cache:clear && php artisan clear-compiled && php artisan route:clear && php artisan config:clear && php artisan view:clear'
 alias pac:c='php artisan config:cache'
 alias pam='php artisan migrate'
 alias pam:r='php artisan migrate:refresh'
@@ -33,6 +29,10 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
+
+# OS X defaults
+alias screensjpg="defaults write com.apple.screencapture type jpg"
+alias screenspng="defaults write com.apple.screencapture type png"
 
 # be nice
 alias please=sudo
