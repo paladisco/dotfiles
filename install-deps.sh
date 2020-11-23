@@ -78,6 +78,10 @@ installcask vlc
 # Remove outdated versions from the cellar
 brew cleanup
 
+# Better Defaults for Key Repeat Rates
+defaults write -g InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 2
+
 # Install Composer globally
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
