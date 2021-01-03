@@ -2,8 +2,9 @@
 xcode-select --install
 
 # install homebrew first
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+export PATH=/opt/homebrew/bin:$PATH
 # Make sure we’re using the latest Homebrew
 brew update
 

@@ -44,6 +44,7 @@ export PATH=/usr/local/php5-7.1.0-20161202-092124/bin:$PATH:/usr/local/pear/bin:
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 export EDITOR="~/bin/mate"
+export PATH=/opt/homebrew/bin:$PATH
 
 ### Z Integration
 if command -v brew >/dev/null 2>&1; then
