@@ -20,15 +20,13 @@ brew install findutils
 brew install bash
 
 # Install wget with IRI support
-brew install wget --enable-iri
+brew install wget
 
 # Install everything else
 brew install ack
 brew install git
 brew install rename
 brew install tree
-brew install esh
-brew install thefuck
 brew install ccat
 brew install exa
 brew install yarn
@@ -54,27 +52,21 @@ brew install z
 
 $(brew --prefix)/opt/fzf/install
 
-
-brew install brew-cask
-
-function installcask() {
-	brew cask install "${@}" 2> /dev/null
-}
-
-installcask alfred
-installcask cakebrew
-installcask caffeine
-installcask docker
-installcask google-chrome
-installcask quitter
-installcask imagealpha
-installcask imageoptim
-installcask iterm2
-installcask slack
-installcask spectacle
-installcask sequel-pro
-installcask virtualbox
-installcask vlc
+brew install --cask alfred
+brew install --cask cakebrew
+brew install --cask caffeine
+brew install --cask docker
+brew install --cask google-chrome
+brew install --cask quitter
+brew install --cask imagealpha
+brew install --cask imageoptim
+brew install --cask iterm2
+brew install --cask slack
+brew install --cask spectacle
+brew install --cask sequel-pro
+brew install --cask virtualbox
+brew install --cask vlc
+brew install --cask visual-studio-code
 
 # Remove outdated versions from the cellar
 brew cleanup
